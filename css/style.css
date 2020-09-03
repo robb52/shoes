@@ -44,7 +44,7 @@ section {
     min-width: 15em;
 }
 
-.spacing>*+* {
+.spacing > * + * {
     margin-top: var(--spacer, 2rem);
 }
 
@@ -145,4 +145,72 @@ span {
 
 .two {
     margin-top: .5em;
+}
+
+.product {
+    background: radial-gradient(var(--clr-inner, rgb(29, 168, 223)), 
+    var(--clr-outer, rgb(207, 74, 190)));
+    padding: 3em;
+    border-radius: 1em;
+    margin-bottom: 5em;
+    text-align: center;
+}
+
+.product-title {
+    font-size: clamp(3rem, 5vw + 1rem, 5.5rem);
+    text-transform: uppercase;
+    line-height: 1;
+    color: #fff;
+}
+
+.product-img {
+    margin: -5em 0 0 0;
+}
+
+@media (min-width: 45em) {
+    .product {
+        text-align: left;
+    }
+
+    .product-title {
+        margin: 0;
+    }
+
+    .product-img {
+        float: right;
+        width: 65%;
+        shape-outside: url(../img/shoe-1.png);
+        shape-margin: 1em;
+        margin: 0 -5em 0 0;
+
+    }
+
+    .product.shoe-left.shoe-white .product-img {
+        float: left;
+        shape-outside: url(../img/shoe-2.png);
+        margin: 0 0 0 -5em;
+        shape-margin: 2em;
+    }
+}
+
+.hero {
+    --clr-accent: #faa700;
+}
+
+.shoe-red {
+    --clr-inner: #faa700;
+    --clr-outer: #e48d00;
+    --clr-accent: #a1173c;
+}
+
+.shoe-white {
+    --clr-inner: #fce4b3;
+    --clr-outer: #eac886;
+    --clr-accent: #2f4858;
+}
+
+.shoe-blue {
+    --clr-inner: #6dd5ed;
+    --clr-outer: #2193b0;
+    --clr-accent: #008951;
 }
